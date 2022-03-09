@@ -1,5 +1,5 @@
 import React from 'react'
-import CardButtons from './CardButtons'
+import CardButton from './CardButton'
 
 function CardForm({onFormChange, onUserSubmit, userInfo}) {
 
@@ -15,7 +15,7 @@ function CardForm({onFormChange, onUserSubmit, userInfo}) {
             <p><input name="1" placeholder='movie one' type="text" value={userInfo.favoriteMovies[0]} onChange={(e) =>onFormChange(e, 0, 'movies')}/></p>
             <p><input name="2" placeholder='movie two' type="text" value={userInfo.favoriteMovies[1]} onChange={(e) => onFormChange(e, 1, 'movies')}/></p>
             <p><input name="3" placeholder='movie three' type="text" value={userInfo.favoriteMovies[2]} onChange={(e) => onFormChange(e, 2, 'movies')}/></p>
-            <CardButtons buttonText={"Submit"} handleClick={onUserSubmit}/>
+            <CardButton buttonText={"Submit"} handleClick={onUserSubmit}/>
         </form>
     </div>
   )
